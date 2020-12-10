@@ -6,6 +6,6 @@ variable "acm_days_to_expiration" {
     type = number
 }
 
-variable "config_sns_topic_arn" {
-    type = null
+#variable "config_sns_topic_arn" {
+#    type = null
 }
