@@ -8,4 +8,4 @@ variable "acm_days_to_expiration" {
 
 #variable "config_sns_topic_arn" {
 #    type = null
-}
+#}
