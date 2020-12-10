@@ -2,7 +2,9 @@ module "config" {
   source  = "trussworks/config/aws"
   version = "4.1.0"
   
-  check_acm_certificate_expiration_check = true
-  acm_days_to_expiration = 14
- # config_sns_topic_arn = null
+  config_name                            = var.config_name
+  config_logs_bucket                     = var.config_logs_bucket
+  check_acm_certificate_expiration_check = var.check_acm_certificate_expiration_check
+  acm_days_to_expiration                 = var.acm_days_to_expiration
+
 }
