@@ -44,6 +44,4 @@ module "config" {
   check_acm_certificate_expiration_check = var.check_acm_certificate_expiration_check
   acm_days_to_expiration                 = var.acm_days_to_expiration
   config_sns_topic_arn                   = aws_sns_topic.config.arn
-  role_arn                               = aws_iam_role.main.arn
-
 }
