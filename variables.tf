@@ -25,5 +25,4 @@ variable "config_logs_bucket" {
 
 variable "config_sns_topic_arn" {
     type      = string
-    default   = some_topic
 }
