@@ -23,6 +23,6 @@ variable "config_logs_bucket" {
   type        = string
 }
 
-#variable "config_sns_topic_arn" {
-#    type = null
-#}
+variable "config_sns_topic_arn" {
+   type = null
+}
