@@ -24,5 +24,4 @@ variable "config_logs_bucket" {
 }
 
 variable "config_sns_topic_arn" {
-   type = null
 }
