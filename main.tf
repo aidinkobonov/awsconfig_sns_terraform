@@ -20,7 +20,7 @@ resource "aws_sns_topic_policy" "config" {
 }
 
 resource "aws_config_configuration_recorder" "main" {
-  name     = default
+  name     = var.config_name
   role_arn = aws_iam_role.main.arn
 
   recording_group {
