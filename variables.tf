@@ -27,7 +27,7 @@ variable "config_sns_topic_arn" {
     type      = string
 }
 
-# variable "include_global_resource_types" {
-#     type      = bool
-#     default   = true
-# }
+variable "include_global_resource_types" {
+    type      = bool
+    default   = true
+}
