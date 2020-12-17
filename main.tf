@@ -19,15 +19,15 @@ resource "aws_sns_topic_policy" "config" {
   policy = data.aws_iam_policy_document.config.json
 }
 
-resource "aws_config_configuration_recorder" "main" {
-  name     = var.config_name
-  role_arn = aws_iam_role.main.arn
+# resource "aws_config_configuration_recorder" "main" {
+#   name     = var.config_name
+#   role_arn = aws_iam_role.main.arn
 
-  recording_group {
-    all_supported                 = true
-    include_global_resource_types = var.include_global_resource_types
-  }
-}
+#   recording_group {
+#     all_supported                 = true
+#     include_global_resource_types = var.include_global_resource_types
+#   }
+# }
 
 module "config" {
   source  = "trussworks/config/aws"
