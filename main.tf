@@ -21,11 +21,11 @@ resource "aws_sns_topic_policy" "config" {
 
 resource "aws_config_configuration_recorder" "main" {
   name     = var.config_name
- # role_arn = aws_iam_role.main.arn
+  role_arn = aws_iam_role.main.arn
 
   recording_group {
     all_supported                 = true
- #   include_global_resource_types = var.include_global_resource_types
+    include_global_resource_types = var.include_global_resource_types
   }
 }
 
