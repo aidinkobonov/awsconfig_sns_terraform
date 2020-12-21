@@ -1,23 +1,23 @@
-data "aws_iam_policy_document" "config" {
-  statement {
-    effect = "Allow"
-    principals {
-      type        = "AWS"
-      identifiers = [module.config.aws_config_role_arn]
-    }
-    actions   = ["SNS:Publish"]
-    resources = [aws_sns_topic.config.arn]
-  }
-}
+# data "aws_iam_policy_document" "config" {
+#   statement {
+#     effect = "Allow"
+#     principals {
+#       type        = "AWS"
+#       identifiers = [module.config.aws_config_role_arn]
+#     }
+#     actions   = ["SNS:Publish"]
+#     resources = [aws_sns_topic.config.arn]
+#   }
+# }
 
-resource "aws_sns_topic" "config" {
-  name = var.config_name
-}
+# resource "aws_sns_topic" "config" {
+#   name = var.config_name
+# }
 
-resource "aws_sns_topic_policy" "config" {
-  arn    = aws_sns_topic.config.arn
-  policy = data.aws_iam_policy_document.config.json
-}
+# resource "aws_sns_topic_policy" "config" {
+#   arn    = aws_sns_topic.config.arn
+#   policy = data.aws_iam_policy_document.config.json
+# }
 
 # resource "aws_iam_role" "main" {
 #   name               = "${var.config_name}-role"
