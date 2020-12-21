@@ -21,7 +21,7 @@ variable "config_name" {
 variable "config_logs_bucket" {
   description = "The S3 bucket for AWS Config logs."
   type        = string
-  default     = "aws_config_bucket"
+  default     = "aws-config-bucket"
 }
 
 variable "config_sns_topic_arn" {
